@@ -17,6 +17,9 @@ export function TaskList() {
   const [responsibleTask, setresponsibleTask] = useState('');
 
   function handleCreateNewTask() {
+   
+    if (!newTaskTitle || !responsibleTask ) return;
+    
     const newTask = {
       id: Math.random(),
       title: newTaskTitle,
